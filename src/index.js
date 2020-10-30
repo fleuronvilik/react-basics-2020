@@ -46,30 +46,38 @@ function Item({item}) {
   )
 }
 
-var housing = {
-  title: "Housing",
-  description: "Housing provided for out-of-state students or those who can't commute.",
-  photo: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/9/93/Housing_Anywhere_logo.png",
-    alt: "Housing Anywhere logo"},
-  cost: "Free"
-}
-
-var fidget_spinner = {
-  title: "Fidget Spinner",
-  description: "Because we like to pretend we're in high school.",
-  photo: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Fidget_spinner_red%2C_cropped.jpg/512px-Fidget_spinner_red%2C_cropped.jpg",
-    alt: "Fidget spinner red, cropped"},
-  cost: "21.99$"
-}
+var items = [
+  {
+    title: "Housing",
+    description: "Housing provided for out-of-state students or those who can't commute.",
+    photo: {
+      src: "https://upload.wikimedia.org/wikipedia/commons/9/93/Housing_Anywhere_logo.png",
+      alt: "Housing Anywhere logo"},
+    cost: "Free"
+  },
+  {
+    title: "Fidget Spinner",
+    description: "Because we like to pretend we're in high school.",
+    photo: {
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Fidget_spinner_red%2C_cropped.jpg/512px-Fidget_spinner_red%2C_cropped.jpg",
+      alt: "Fidget spinner red, cropped"},
+    cost: "21.99$"
+  },
+  {
+    title: "Rubber Duckies",
+    description: "To help you solve your hardest coding problems.",
+    photo: {
+      alt: "Rubber duck assisting with debugging",
+      src: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rubber_duck_assisting_with_debugging.jpg"},
+  cost: "3.50$"
+  }
+]
 
 function Catalog() {
   return (
     <main>
       <h1 style={{textAlign: "center", textTransform: "uppercase"}}>Catalog</h1>
-      <Item item={housing} />
-      <Item item={fidget_spinner} />
+      {items.map(item => <Item item={item} />)}
     </main>
   )
 }
