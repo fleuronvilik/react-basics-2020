@@ -1,0 +1,2 @@
+*{box-sizing:border-box}article,main{display:flex;flex-direction:column}@media screen and (min-width:768px){main{flex-flow:row wrap;justify-content:space-between}}h1{width:100%}article{padding:1em}article:hover{border:1px solid #ff0}img{align-self:center}button{align-self:flex-start}
+/*# sourceMappingURL=main.2012d645.chunk.css.map */
