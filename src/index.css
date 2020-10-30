@@ -1,6 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
 main, article {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+h1 {
+  width: 100%;
+}
+
+article {
+  padding: 1em;
+}
+
+article:hover {
+  border: 1px solid yellow;
 }
 
 img {
