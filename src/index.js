@@ -48,7 +48,7 @@ function Item() {
 function Catalog() {
   return (
     <main>
-      <h1>Catalog</h1>
+      <h1 style={{textAlign: "center", textTransform: "uppercase"}}>Catalog</h1>
       <Item />
       <Item />
     </main>
