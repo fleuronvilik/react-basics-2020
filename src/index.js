@@ -33,12 +33,12 @@ function Examples() {
   )
 }
 
-function Item({item}) {
-  const {title, description, photo: {src, alt}, cost} = item;
+function Item({item, children}) {
+  const {title, photo: {src, alt}, cost} = item;
   return (
     <article>
       <h2>{title}</h2>
-      <p>{description}</p>
+      <p>{children}</p>
       <img width="128" alt={alt} src={src}/>
       <hr/>
       <button>{cost}</button>
@@ -48,7 +48,6 @@ function Item({item}) {
 
 var housing = {
   title: "Housing",
-  description: "Housing provided for out-of-state students or those who can't commute.",
   photo: {
     src: "https://upload.wikimedia.org/wikipedia/commons/9/93/Housing_Anywhere_logo.png",
     alt: "Housing Anywhere logo"},
@@ -57,7 +56,6 @@ var housing = {
 
 var fidget_spinner = {
   title: "Fidget Spinner",
-  description: "Because we like to pretend we're in high school.",
   photo: {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Fidget_spinner_red%2C_cropped.jpg/512px-Fidget_spinner_red%2C_cropped.jpg",
     alt: "Fidget spinner red, cropped"},
@@ -68,8 +66,12 @@ function Catalog() {
   return (
     <main>
       <h1 style={{textAlign: "center", textTransform: "uppercase"}}>Catalog</h1>
-      <Item item={housing} />
-      <Item item={fidget_spinner} />
+      <Item item={housing}>
+        Housing provided for out-of-state students or those who can't commute.
+      </Item>
+      <Item item={fidget_spinner}>
+        Because we like to pretend we're in high school.
+      </Item>
     </main>
   )
 }
