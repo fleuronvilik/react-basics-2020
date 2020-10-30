@@ -31,7 +31,29 @@ function Examples() {
   )
 }
 
+function Item() {
+  return (
+    <article>
+      <h2>Housing</h2>
+      <p>Housing provided for out-of-state students or those who can't commute.</p>
+      <img width="128" alt="Housing Anywhere logo" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Housing_Anywhere_logo.png"/>
+      <hr/>
+      <button>Free</button>
+    </article>
+  )
+}
+
+function Catalog() {
+  return (
+    <main>
+      <h1>Catalog</h1>
+      <Item />
+      <Item />
+    </main>
+  )
+}
+
 ReactDOM.render(
-  <App />,
+  <Catalog />,
   document.getElementById('root')
 );
