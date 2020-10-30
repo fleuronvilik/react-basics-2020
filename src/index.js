@@ -1,6 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+class App extends React.Component {
+  render() {
+    return (
+      <main>
+        <h1>Hello, World!</h1>
+        <Examples />
+      </main>
+    )
+  }
+}
+
 function Examples() {
   return (
     <dl>
@@ -17,10 +28,10 @@ function Examples() {
         <code>console.log("Hello, World!")</code>
       </dd>
     </dl>
-  );
+  )
 }
 
 ReactDOM.render(
-  <Examples />,
+  <App />,
   document.getElementById('root')
 );
