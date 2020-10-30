@@ -48,6 +48,7 @@ function Item({item}) {
 
 var items = [
   {
+    id: 1,
     title: "Housing",
     description: "Housing provided for out-of-state students or those who can't commute.",
     photo: {
@@ -56,6 +57,7 @@ var items = [
     cost: "Free"
   },
   {
+    id: 2,
     title: "Fidget Spinner",
     description: "Because we like to pretend we're in high school.",
     photo: {
@@ -64,6 +66,7 @@ var items = [
     cost: "21.99$"
   },
   {
+    id: 3,
     title: "Rubber Duckies",
     description: "To help you solve your hardest coding problems.",
     photo: {
@@ -77,7 +80,7 @@ function Catalog() {
   return (
     <main>
       <h1 style={{textAlign: "center", textTransform: "uppercase"}}>Catalog</h1>
-      {items.map(item => <Item item={item} />)}
+      {items.map(item => <Item key={item.id} item={item} />)}
     </main>
   )
 }
