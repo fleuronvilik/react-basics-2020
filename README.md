@@ -25,6 +25,6 @@ Watch the full course [on the freeCodeCamp.org YouTube channel](https://www.yout
 
 ### Hello, World!
 
-### Catalogß
+### Catalog
 
 ![](react-basics-2020.png)
